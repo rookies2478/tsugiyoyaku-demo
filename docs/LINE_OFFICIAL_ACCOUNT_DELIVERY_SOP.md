@@ -107,9 +107,9 @@
 
 Movanceデモでは次のURLを利用している。
 
-- 予約: `https://rookies2478.github.io/movance-demos/#course`
-- アクセス: `https://rookies2478.github.io/movance-demos/#access`
-- FAQ: `https://rookies2478.github.io/movance-demos/#faq`
+- 予約: `https://rookies2478.github.io/tsugiyoyaku-demo/#course`
+- アクセス: `https://rookies2478.github.io/tsugiyoyaku-demo/#access`
+- FAQ: `https://rookies2478.github.io/tsugiyoyaku-demo/#faq`
 
 顧客案件では上記をその案件の本番URLへ差し替える。
 

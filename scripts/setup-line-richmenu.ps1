@@ -14,8 +14,8 @@
 $ErrorActionPreference = 'Stop'
 
 $imagePath = $env:LINE_RICHMENU_IMAGE_PATH
-if (-not $imagePath) { $imagePath = 'C:\dev\movance-demos\line-richmenu-2500x1686.jpg' }
-$baseUrl = 'https://rookies2478.github.io/movance-demos/'
+if (-not $imagePath) { $imagePath = 'C:\dev\tsugiyoyaku-demo\line-richmenu-2500x1686.jpg' }
+$baseUrl = 'https://rookies2478.github.io/tsugiyoyaku-demo/'
 
 $plainToken = $null
 $secure = $null

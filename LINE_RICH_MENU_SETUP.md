@@ -7,7 +7,7 @@
 
 いずれの方法でも、最終的にLINEアプリ上のリッチメニュー表示・タップ領域・遷移先URLは同一になる。LIFF / Mini App の実装は今回対象外。
 
-デモURL: https://rookies2478.github.io/movance-demos/
+デモURL: https://rookies2478.github.io/tsugiyoyaku-demo/
 
 ---
 
@@ -59,9 +59,9 @@ LINE Official Account Manager の「リッチメニュー作成」画面で以�
 
 | 領域 | カード内容 | 設定するURL |
 |---|---|---|
-| 左（1枚目） | 空き時間を見て予約する（RESERVE） | `https://rookies2478.github.io/movance-demos/#course` |
-| 中央（2枚目） | 店舗情報・アクセス（ACCESS） | `https://rookies2478.github.io/movance-demos/#access` |
-| 右（3枚目） | 予約についてよくある質問（FAQ） | `https://rookies2478.github.io/movance-demos/#faq` |
+| 左（1枚目） | 空き時間を見て予約する（RESERVE） | `https://rookies2478.github.io/tsugiyoyaku-demo/#course` |
+| 中央（2枚目） | 店舗情報・アクセス（ACCESS） | `https://rookies2478.github.io/tsugiyoyaku-demo/#access` |
+| 右（3枚目） | 予約についてよくある質問（FAQ） | `https://rookies2478.github.io/tsugiyoyaku-demo/#faq` |
 
 ※ 各URLは `index.html` 内の `#course` / `#access` / `#faq` セクションに対応しており、既存の実装・ホットスポット構成（`index.html` 内 `.hotspot.reserve` / `.hotspot.access` / `.hotspot.faqhot`、いずれも横幅33.333%均等）と一致している。
 
@@ -83,7 +83,7 @@ LINE Official Account Manager の「リッチメニュー作成」画面で以�
 1. Movance公式アカウント（`@433iwomu`）を友だち追加済みのスマートフォンでLINEアプリを開く
 2. トーク画面下部にリッチメニューが表示されることを確認
 3. 画像が縦横比を保った状態（引き伸ばし・トリミングされていない）で表示されていることを確認
-4. **左（予約する）** をタップ → ブラウザが開き `https://rookies2478.github.io/movance-demos/#course` の「メニューを選択」画面が表示されることを確認
+4. **左（予約する）** をタップ → ブラウザが開き `https://rookies2478.github.io/tsugiyoyaku-demo/#course` の「メニューを選択」画面が表示されることを確認
 5. **中央（アクセス）** をタップ → `#access` の店舗情報・地図（Googleマップ埋め込み）画面が表示されることを確認
 6. **右（FAQ）** をタップ → `#faq` のFAQ画面が表示されることを確認
 7. スマートフォン実機（iOS / Android）それぞれでタップ領域のズレがないか確認（3領域とも均等3分割のため基本的にズレは生じない想定だが、実機確認を推奨）
@@ -97,9 +97,9 @@ LINE Official Account Manager の「リッチメニュー作成」画面で以�
 ### B-1. スクリプトの動作内容
 
 1. リッチメニュー作成（`POST /v2/bot/richmenu`）— サイズ2500×1686、左834px/中央833px/右833px の縦フル均等3分割、各領域のaction typeは`uri`
-   - 左: `https://rookies2478.github.io/movance-demos/#course`
-   - 中央: `https://rookies2478.github.io/movance-demos/#access`
-   - 右: `https://rookies2478.github.io/movance-demos/#faq`
+   - 左: `https://rookies2478.github.io/tsugiyoyaku-demo/#course`
+   - 中央: `https://rookies2478.github.io/tsugiyoyaku-demo/#access`
+   - 右: `https://rookies2478.github.io/tsugiyoyaku-demo/#faq`
 2. 画像アップロード（`POST /v2/bot/richmenu/{richMenuId}/content`）— `line-richmenu-2500x1686.jpg` をアップロード
 3. デフォルトリッチメニューに設定（`POST /v2/bot/user/all/richmenu/{richMenuId}`）
 4. 疎通確認（`GET /v2/bot/info`、`GET /v2/bot/richmenu/{richMenuId}`、`GET /v2/bot/user/all/richmenu`）
