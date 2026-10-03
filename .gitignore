@@ -1,0 +1,26 @@
+# Secrets / local environment
+.env
+.env.*
+!.env.example
+secrets.*
+credentials.*
+
+# Dependencies / generated output
+node_modules/
+dist/
+build/
+
+# Logs / temporary files
+*.log
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local archives / handoff artifacts
+*.zip
+*.7z
